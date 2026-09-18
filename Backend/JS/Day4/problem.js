@@ -85,17 +85,22 @@ palindrome(10);
 
 //Find the missing number
 let arr=[2,3,5,6,8,9]
-let missing=0
 let result=0
-for(let i=0;i<arr.length;i++){
-    for(let j=1;j<i;j++){
+for(let i=0;i<arr.length-1;i++){
 result=arr[i]+1
+if(result!==arr[i+1]){
+    console.log(result);
+    
+}
 
     }
     
-    
-}
-console.log(result);
+// 1.start the loop from index 0
+// 2.Then add arr[i]+1 means the i=2+1 store in result
+// 3.check if result not equal to arr[i+1] means result=3 and arr[i+1]=3
+// 4.repeat the process until condition satisfy
+
+
 
 //Count how many times a number appears
 let arrays=[2,5,2,8,2,10]
@@ -112,5 +117,27 @@ console.log(count);
 // 2.Then condition t < arrays.length to run 
 // 3.if arrays[i]==target like 2==2 count++
 // 4.return count=1
+
+//leetcode 1672
+let account=[[1,2,3],[4,5,6],[5,3,2]]
+let total=0
+let maxWealth=0
+for(let i=0;i<account.length;i++){
+    total=0
+for(let j=0;j<account[i].length;j++){
+   
+    
+ total+=account[i][j]
+ 
+ 
+}
+if(maxWealth < total){
+    maxWealth=total
+   
+    
+}
+
+}
+console.log(maxWealth);
 
 

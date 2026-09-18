@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+     //task 1
+     let salary= [15000, 20000, 25000, 30000, 35000];
+     let updatedSalary= salary.map((e,i)=>{
+           return e+2000    
+     })
+     console.log("oldSalary",salary);
+     console.log("updatedSalary",updatedSalary);
+     //task 2
+     let marks = [35, 78, 42, 90, 25, 67, 55];
+     let filters=marks.filter((marks)=>{
+       if(marks >50){
+        return marks
+       }
+     })
+     console.log(filters);
+     //task 3
+     let products = [
+    { id: 101, name: "Laptop", price: 55000 },
+    { id: 102, name: "Mouse", price: 800 },
+    { id: 103, name: "Keyboard", price: 1500 },
+    { id: 103, name: "Monitor", price: 12000 }
+];
+  let result=products.find((product)=>{
+   return product.id===103
+})
+console.log(result);
+
+//task 4
+let cart = [
+    { name: "Shirt", price: 1200 },
+    { name: "Shoes", price: 2500 },
+    { name: "Watch", price: 3000 },
+    { name: "Bag", price: 1500 }
+];
+let amount=cart.reduce((a,value)=>{
+ return a+value.price
+},0)
+
+console.log(amount);
+//task 5
+let students = [
+    { id: 1, name: "Arun", mark: 85 },
+    { id: 2, name: "Bala", mark: 45 },
+    { id: 3, name: "Kumar", mark: 72 },
+    { id: 4, name: "Priya", mark: 95 },
+    { id: 5, name: "Ravi", mark: 38 }
+];
+let name=students.map((e,i)=>{
+   return e.name;
+   
+})
+console.log(name);
+let mark=students.filter((value)=>{
+   if(value.mark > 60){
+    console.log( value.name);
+    
+   } 
+})
+let finds=students.find((value)=>{ return value.id===4})
+console.log(finds);
+let total=students.reduce((a,value)=>{return a+value.mark},0)
+console.log(total);
+let average=students.reduce((a,value)=>{return total/5},0)
+console.log(average);
+
+    </script>
+</body>
+</html>
