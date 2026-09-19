@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise</title>
+</head>
+<body>
+    <script>
+//task 1
+const calculate=(a,b,sum)=>{
+    let result=a+b
+    sum(result)
+}
+const answer=(value)=>{
+    console.log(value);
+    
+}
+calculate(79,30,answer)
+//task 2
+const checkNum=(num)=>{
+    return new Promise((resolve, reject) => {
+        if(num > 10){
+            resolve()
+        }else{
+   reject()
+        }
+    })
+}
+checkNum(11)
+    .then((result)=>{
+        console.log("valid Number");
+        
+    })
+   .catch((error)=>{
+        console.log("error");
+        
+    })
+//task3
+const verifyNum=async()=>{
+    try{
+  const result=await checkNum(20)
+ 
+  console.log("perfect Number");
+}catch{
+    console.log("error");
+}
+}
+verifyNum()
+    </script>
+</body>
+</html>

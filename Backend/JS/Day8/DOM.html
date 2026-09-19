@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <script>
+//task 1
+const electricityBill=(name,unit)=>{
+    if(unit <=100&&unit>=0){
+        console.log(name,+"","Amount  ",unit*2);
+        
+    }
+    else if(unit >=101&&unit<=200){
+       console.log(name,"Amount  ",unit*3);
+       
+    }
+     else if(unit>=201){
+       console.log(name,"Amount:  ",unit*5);
+       
+    }
+}
+electricityBill("Lokesh",280)
+//task 2
+const ATM=(amount,withraw)=>{
+    if(withraw>0 && withraw%500===0 && amount>=withraw){
+       let accountt=amount-withraw
+       console.log("Balance: ",accountt);
+       console.log("Withraw successfully: ",withraw);
+       
+    }else{
+        console.log("Insufficent Balance");
+        
+    }
+
+}
+ATM(15000,200)
+
+    </script>
+</body>
+</html>
