@@ -197,3 +197,29 @@
 // 1.start the outer loop run  i<arr.length then first i=0 0th index means arr[i]=2
 // 2.then inner loop run start with i+1 mean i=0+1,j=1 check index 1
 // 3.after the if condition check arr[i]===arr[j] mean return arr[i]
+
+
+//Find the second largest number without sort()
+const secondLarge=(arr)=>{
+    let maxNum=arr[0]
+    let secondNum=0
+    for(let a=1;a<arr.length;a++){
+        if(arr[a]>maxNum){
+       secondNum=maxNum
+       maxNum=arr[a]
+    } else if (arr[a] > secondNum) {
+            secondNum = arr[a]
+        }
+    
+    }
+    console.log(maxNum);
+    console.log(secondNum);
+    
+    
+}
+secondLarge([23,45,78,102,101,34,90])
+//1.start with for loop in a=1 and loop run until reach a< arr.length
+//2.the if condition check arr[a]>maxNum like 45 > 23 check it true so store 45 in maxNum
+//3.then else if condition check arr[a]>secondNum in between maxNum value store in secondNum and current value also store in largeNum
+//4.It will check arr[a]>secondNum  means store arr[a] in secondNum
+//return the second largest number and maximum Number
