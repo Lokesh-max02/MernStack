@@ -200,26 +200,107 @@
 
 
 //Find the second largest number without sort()
-const secondLarge=(arr)=>{
-    let maxNum=arr[0]
-    let secondNum=0
-    for(let a=1;a<arr.length;a++){
-        if(arr[a]>maxNum){
-       secondNum=maxNum
-       maxNum=arr[a]
-    } else if (arr[a] > secondNum) {
-            secondNum = arr[a]
-        }
+// const secondLarge=(arr)=>{
+//     let maxNum=arr[0]
+//     let secondNum=0
+//     for(let a=1;a<arr.length;a++){
+//         if(arr[a]>maxNum){
+//        secondNum=maxNum
+//        maxNum=arr[a]
+//     } else if (arr[a] > secondNum) {
+//             secondNum = arr[a]
+//         }
     
-    }
-    console.log(maxNum);
-    console.log(secondNum);
+//     }
+//     console.log(maxNum);
+//     console.log(secondNum);
     
     
-}
-secondLarge([23,45,78,102,101,34,90])
+// }
+// secondLarge([23,45,78,102,101,34,90])
 //1.start with for loop in a=1 and loop run until reach a< arr.length
 //2.the if condition check arr[a]>maxNum like 45 > 23 check it true so store 45 in maxNum
 //3.then else if condition check arr[a]>secondNum in between maxNum value store in secondNum and current value also store in largeNum
 //4.It will check arr[a]>secondNum  means store arr[a] in secondNum
 //return the second largest number and maximum Number
+
+//Sorting a array 
+// const moveZero=(num)=>{
+    
+// for(let t=0;t<num.length-1;t++){
+//    for(let y=num.length-1-t;y>= 0;y--){
+//     if(num[y]<num[y+1]){
+//         let temp=num[y]
+//         num[y]=num[y+1]
+//         num[y+1]=temp
+//     }
+//    }
+// }
+// console.log(num);
+// }
+// moveZero([3,4,6,0,5,3,0,9,87,0])
+
+//Move all zeros to the end
+// const Zeros=(arr)=>{
+//     let position=0
+//     for(let i=0;i<arr.length;i++){
+//         if(arr[i]!==0){
+//             let temp=arr[position]
+//             arr[position]=arr[i]
+//             arr[i]=temp
+//             position++
+//         }
+//     }
+//     console.log(arr);
+    
+// }
+// Zeros([3,5,8,0,2,3,5,0,67,55,0])
+//1.start the loop index =0 and condition satisfy i<arr.length until run 
+//2.then if condition arr[i]!==0 not equal to 0 it will swap the value
+//3.the temp is temporary store the position like 0 then arr[position]=arr[i] if arr[i]=3 it store position
+//4.after arr[i]=temp then position++ repeat the process and return arr
+
+//container with most water
+let arr = [3,5,7,9,3,4,7,8]
+let capacity = 0
+for(let i=0;i<arr.length;i++){
+    for(let j=i+1;j<arr.length;j++){
+         console.log(i,j);
+        
+        let min 
+
+        console.log(min);
+        
+         if(arr[i]<arr[j]){
+             min = arr[i]
+            //  console.log(`capacity${capacity}`);
+            
+         }
+         else{
+              min = arr[j]
+            //  console.log(`else capacity${capacity}`);
+
+         }
+
+
+         let base = j-i
+
+         console.log('min',min);
+
+         console.log('base',base);
+
+         
+        let area = base * min
+
+      console.log('area',area);
+      
+
+         if(capacity<area){
+             capacity=area
+         }
+         console.log(capacity);
+         
+    }
+}
+
+ console.log(capacity);
