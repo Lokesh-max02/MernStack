@@ -261,46 +261,102 @@
 //4.after arr[i]=temp then position++ repeat the process and return arr
 
 //container with most water
-let arr = [3,5,7,9,3,4,7,8]
-let capacity = 0
-for(let i=0;i<arr.length;i++){
-    for(let j=i+1;j<arr.length;j++){
-         console.log(i,j);
-        
-        let min 
+// let arr = [3,5,7,9,3,4,7,8]
+// let capacity = 0
+// for(let i=0;i<arr.length;i++){
+//     for(let j=i+1;j<arr.length;j++){
+//          console.log(i,j);
+//         let min 
+//         console.log(min);
+//          if(arr[i]<arr[j]){
+//              min = arr[i]
+//             //  console.log(`capacity${capacity}`);
+//          }
+//          else{
+//               min = arr[j]
+//             //  console.log(`else capacity${capacity}`);
+//          }
+//          let base = j-i
+//          console.log('min',min);
+//          console.log('base',base);         
+//         let area = base * min
+//       console.log('area',area);
+//          if(capacity<area){
+//              capacity=area
+//          }
+//          console.log(capacity); 
+//     }
+// }
+//  console.log(capacity);
 
-        console.log(min);
-        
-         if(arr[i]<arr[j]){
-             min = arr[i]
-            //  console.log(`capacity${capacity}`);
-            
-         }
-         else{
-              min = arr[j]
-            //  console.log(`else capacity${capacity}`);
+//Palindrome
+// const palindrome=(string)=>{
+//     let reverse=""
+//     for(let a=string.length-1;a>=0;a--){
+//     reverse +=string[a]
+//     }
+//     if(string===reverse){
+//         return true
+//     }else{
+//         return false
+//     }
+// }
+// //1.first start the loop a start with a=string.length-1 and the condition a>=0 run the loop
+// //2.then string[a] store in  reverse and if condition check the string ===reverse return true else return false
+// const largestPalndrome=(string)=>{
+// if(palindrome(string)){
+//     console.log("palindrome");
+    
+// }else{
+//     console.log("Not palindrome");
+    
+// }
+// let substrings=""
+// for(let c=0;c<string.length;c++){
+//     for(let d=c+1;d<=string.length;d++){
+//         let sec=string.substring(c,d)
+//         if(palindrome(sec)){
+//         if(sec.length > substrings.length){
+//             substrings=sec
+//         }
+//     }
+//     }
+   
+   
+// }
 
-         }
+// console.log(substrings);
+
+// }
+// largestPalndrome("amma")
 
 
-         let base = j-i
-
-         console.log('min',min);
-
-         console.log('base',base);
-
-         
-        let area = base * min
-
-      console.log('area',area);
-      
-
-         if(capacity<area){
-             capacity=area
-         }
-         console.log(capacity);
-         
+//leetcode 27 question is remove element
+const removeElement=(arr,value)=>{
+   
+    let k=0
+    for(let a=0;a<arr.length;a++){
+  if(value!==arr[a]){
+    arr[k]=arr[a]
+    k++
+  }
     }
+   return k;
+   
+    
 }
+console.log(removeElement([3,2,3,2],3));
+//1.start the program with two parameter like arr,value and create empty variable like k
+//2.Then for start a=0 and run the condition satisfy a<arr.length and increament the arr[a]
+//3.then if condition arr[a]!==value arr[a] is not equal to value means store the arr[k]
+//4.Last k++ increase the k return k
 
- console.log(capacity);
+
+
+
+
+
+
+
+
+
