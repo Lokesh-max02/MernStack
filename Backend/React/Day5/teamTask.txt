@@ -1,0 +1,29 @@
+1.Js ,react ,angular which one prefer and why in your project.
+
+*I prefer React because it is simple, component-based, and flexible for building user interfaces.
+*JavaScript is the core language, while React is a JavaScript library that helps us build reusable UI components efficiently.
+*Angular is a complete framework and provides many features out of the box, but I prefer React because it gives more flexibility and is easier to integrate with different libraries.
+*In my project, I used React.js for the frontend. I divided the application into reusable components, used props and state to manage data, and used React Router for navigation. I chose React because it helped me create a modular and responsive user interface and made the project easier to maintain.
+
+2.create a car in website ,what all are the function ,variable etc used in react,JS
+
+*If I am create car in react ,first create structure using tailwind and html.
+*The car should function create a three variable called Brake,acceralator,Gulch
+*And create function called speed and and variable if apply brake the speed is reduce and then press accerlator the speed increase.
+*The car has v8 engine .
+
+3.which are the place did you use var,let,const in your point of view
+
+*var : the var is gobal scope which once declare a value in function it can easly change the value in any part code .
+*let : Let is functional scope if you use logical process like value reassigning means you can use let and if the functional end outside the value are not accessed.
+*const : Its also functional scope if you are use const value and const function the value are not redeclare or deassign ,once create did not alter anything.
+
+4.which one prefer in JS DOM and React ES6+ feature if you are create a website .
+
+*If I am creating a modern website, I prefer **React with modern ES6+ JavaScript features** rather than directly manipulating the DOM.
+*JavaScript DOM is useful for understanding how the browser works and for small websites, but when the application becomes larger, manually updating the DOM can become difficult to maintain.
+*React provides a component-based structure, reusable components, state management, and efficient UI updates. At the same time, I use ES6+ features such as let/const, arrow functions, destructuring, spread operators, template literals, map(), filter(), and promises/async-await in my React code.
+*So, my preference is React for the UI + ES6+ JavaScript for writing the logic. I still understand the DOM because React ultimately works with the browser DOM.
+
+
+

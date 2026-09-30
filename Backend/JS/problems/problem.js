@@ -332,25 +332,90 @@
 
 
 //leetcode 27 question is remove element
-const removeElement=(arr,value)=>{
+// const removeElement=(arr,value)=>{
    
-    let k=0
-    for(let a=0;a<arr.length;a++){
-  if(value!==arr[a]){
-    arr[k]=arr[a]
-    k++
-  }
-    }
-   return k;
+//     let k=0
+//     for(let a=0;a<arr.length;a++){
+//   if(value!==arr[a]){
+//     arr[k]=arr[a]
+//     k++
+//   }
+//     }
+//    return k;
    
     
-}
-console.log(removeElement([3,2,3,2],3));
+// }
+// console.log(removeElement([3,2,3,2],3));
 //1.start the program with two parameter like arr,value and create empty variable like k
 //2.Then for start a=0 and run the condition satisfy a<arr.length and increament the arr[a]
 //3.then if condition arr[a]!==value arr[a] is not equal to value means store the arr[k]
 //4.Last k++ increase the k return k
 
+//leetcode 67
+// const binary=(a,b)=>{
+//   let result=""
+//   let carry=0
+//   let i=a.length-1
+//   let j=b.length-1
+//   while(i>=0||j>=0||carry>0){
+//     let sum=carry
+//     if(i>=0){
+//       sum+=Number(a[i])
+//       i--
+//     }
+//     if(j>=0){
+//       sum+=Number(b[j])
+//       j--
+//     }
+//     result=(sum%2)+result
+//     carry=Math.floor(sum/2)
+//   }
+//    return result;
+   
+// }
+// binary("11","1")
+
+//Non repeating number in array
+// const nonRepeat=(arr)=>{
+//  for (let i = 0; i < arr.length; i++) {
+//     let count = 0;
+//     for (let j = 0; j < arr.length; j++) {
+//         if (arr[i] === arr[j]) {
+//             count++;
+//         }
+//     }
+//     if (count === 1) {
+//         console.log(arr[i]);
+//         break;
+//     }
+// }
+// }
+// nonRepeat([2,3,4,5,2,4,7,8])
+// 1. The outer loop checks every element of the array, starting from i = 0.
+// 2. The inner loop compares arr[i] with every element arr[j]. If both values are equal, count++ increases the occurrence count.
+// 3. After checking the complete array, the if condition checks whether count === 1. If it is 1, that element is not repeated.
+// 4. break stops the loop after finding the first non-repeated element.
+
+//leetcode 83
+const duplicate=(arr)=>{
+  let result=[]
+  let count=0
+  for(let i=0;i<arr.length;i++){
+    for(let j=i+1;j<arr.length;j++){
+    if(arr[i]===arr[j]){
+      count++
+    }
+    }
+    if(count===1){
+      result +=arr[i]
+      console.log(count);
+      
+    }
+  }
+console.log(result);
+
+}
+duplicate([2,3,4,2])
 
 
 
