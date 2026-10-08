@@ -397,58 +397,88 @@
 // 4. break stops the loop after finding the first non-repeated element.
 
 //leetcode 83
-const duplicate=(arr)=>{
- let result=[]
- 
- for(let i=0;i<=arr.length;i++){
-let count=0
-for(let j=i+1;j<arr.length;j++){
-  if(arr[i]!==arr[j]){
-   count++
-  }
-  
+// const duplicate=(arr)=>{
 
-}
-if(count===1){
-  result+=arr[i]
-}
- }
-console.log(result);
+//  let result=[]
+//  for(let i=0;i<arr.length;i++){
+//      let count=0
+//     for(let j=i+1;j<arr.length;j++){
+//        if(arr[i]===arr[j]){
+//         count++
+        
+//        }
+       
+        
+//     }
+//     if(count===0){
+//         result.push(arr[i])
+//        }
+   
+//  }
+//  console.log(result);
+   
+// }
+// duplicate([1,1,2,3,3])
 
-}
-duplicate([2,3,4,2])
+//same leetcode 83 question with different way to solve like linked list
+// const deleteDuplicates=(head)=>{
+// let current=head
+// while(current!==null && current.next!==null){
+//     if(current.val===current.next.val){
+//         current.next=current.next.next
+//     }else{
+//         current=current.next
+//     }
+// }
+// console.log(head);
+
+// }
+// deleteDuplicates([1,1,2,3,3])
 
 //Find the longest subarray with no duplicate values
-const subArray = (array) => {
-    let longestCount = 0;
-    for (let a = 0; a < array.length; a++) {
-        let count = 0;
-        for (let b = a; b < array.length; b++) {
-            let duplicate = false;
-            for (let c = a; c < b; c++) {
-                if (array[c] === array[b]) {
-                    duplicate = true;
-                    break;
-                }
-            }
-            if (duplicate) {
-                break;
-            }
-            count++;
-        }
-        if (count > longestCount) {
-            longestCount = count;
-        }
-    }
-    return longestCount;
-};
-console.log(subArray([1, 2, 3, 1, 4, 5, 6]));
+// const subArray = (array) => {
+//     let longestCount = 0;
+//     for (let a = 0; a < array.length; a++) {
+//         let count = 0;
+//         for (let b = a; b < array.length; b++) {
+//             let duplicate = false;
+//             for (let c = a; c < b; c++) {
+//                 if (array[c] === array[b]) {
+//                     duplicate = true;
+//                     break;
+//                 }
+//             }
+//             if (duplicate) {
+//                 break;
+//             }
+//             count++;
+//         }
+//         if (count > longestCount) {
+//             longestCount = count;
+//         }
+//     }
+//     return longestCount;
+// };
+// console.log(subArray([1, 2, 3, 1, 4, 5, 6]));
 // 1. The outer loop starts from a = 0 and checks every possible starting position of the subarray.
 // 2. The second loop starts from b = a and moves forward, creating a continuous subarray from a to b.
 // 3. The third loop checks the previous elements from a to b - 1. If array[c] === array[b], a duplicate is found, so duplicate = true and the loop stops.
 // 4. If there is no duplicate, count++. After each starting position, if count > longestCount, the longestCount stores the new longest subarray length. 
 
+let arr=[345,2,3,4,5,6,78,9]
+let largest=arr[0]
+let second=arr[1]
+for(let i=1;i<arr.length;i++){
+    if(arr[i]>largest){
+    second=largest
+    largest=arr[i]
+}
+if(arr[i]<largest &&second<largest){
+    second=arr[i]
+}
+} 
 
-
+console.log(largest);
+console.log(second);
 
 
