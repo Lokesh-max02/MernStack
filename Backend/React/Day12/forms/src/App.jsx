@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Task from "./component/task"
 
 const App = () => {
   //task-1
@@ -57,6 +58,7 @@ const editFruit=(e,i)=>{
 }
   return (
    <>
+   <Task/>
    <div>
    <div>
    <h1>Task-1</h1>
