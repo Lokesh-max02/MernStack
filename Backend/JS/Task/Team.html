@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//      let arr=[ { type: "credit", amount: 2000, timestamp: 1 },
+//   { type: "debit", amount: 1500, timestamp: 2 },
+//   { type: "debit", amount: 7000, timestamp: 3 },
+//   { type: "credit", amount: 1000, timestamp: 4 },
+//   { type: "debit", amount: 2000, timestamp: 5 }]
+//   let total=5000
+//   let denied=[]
+//   let result=[]
+//   for (let i = 0; i < arr.length; i++) {
+//   let t = arr[i];
+
+//   if (t.type === "credit") {
+//     total = total + t.amount;
+//   } else if (t.type === "debit") {
+//     if (t.amount <= total) {
+//       total = total - t.amount;
+//     } else {
+//       denied.push(t);
+//     }
+//   } else {
+//       denied.push(t);
+//     }
+//    result.push({
+//     ...t,
+//     total: total
+//   });
+// }
+
+// console.log("Final Balance:", total);
+// console.log("Running Transactions:", result);
+// console.log("Rejected Transactions:", denied);
+
+
+//task-1
+//  Find Second Largest Number
+// let arr=[10,45,20,45,30]
+// let Largest=0
+// let second=0
+// for(let i=0;i<arr.length;i++){
+//   if(arr[i]>=Largest){
+//     second=Largest
+//     let temp=second
+//     Largest=arr[i]
+//   }else if(Largest >=second){
+//   second=arr[i]
+//   }
+
+// }
+// console.log(second);
+// console.log(Largest);
+
+//task-2
+// Remove Duplicate Numbers
+// let num=[1,2,2,3,4,4,5]
+// let result=[]
+// for(let a=0;a<num.length;a++){
+//   let count=0
+// for(let b=a;b<=num.length;b++){
+//   if(arr[a]===arr[b]){
+//     count++
+//   }
+ 
+// }
+//  if(count===1){
+//     result.push(num[a])
+//   }
+// }
+// console.log(result);
+
+//task-3
+//Count vowels
+// let char="banana"
+// let ans=""
+// for(let d=0;d<char.length;d++){
+//   ans=char[d]
+//   if(ans==="a"||"e"||"i"||"o"||"u"){
+//      ans=ans+char[d]
+//   }
+// }
+// console.log(ans);
+
+//task-3
+// Count Character Frequency
+ let char = "banana";
+
+for (let d = 0; d < char.length; d++) {
+  let count = 0;
+  let found = false;
+  for (let k = 0; k < d; k++) {
+    if (char[d] === char[k]) {
+      found = true;
+      break;
+    }
+  }
+  if (!found) {
+    for (let c = 0; c < char.length; c++) {
+      if (char[d] === char[c]) {
+        count++;
+      }
+    }
+
+    console.log(char[d], count);
+  }
+}
+
+    </script>
+</body>
+</html>
