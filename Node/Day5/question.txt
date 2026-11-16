@@ -1,0 +1,117 @@
+question:
+
+1.what is server
+ *A server is a computer or software that receives request from client and sends response
+  *ex:client:Browser or mobile application
+  *server:Backend application
+
+2.what is resource in backend development
+
+*A resourse in backend development is an entity or data managed by application  through api endpoint.
+*eg:It includes users,student,productsand order.
+*we can perform CRUD operation on this resourse
+
+3.what is node and it features
+
+*Node .js is open source and cross platform JavaScript runtime environment that allows us to execute javascript outside the browser
+
+*Features:
+1.Asynchronous
+2.Non-Blocking input/output
+3.Single threaded Event loop
+4.Fast execution 
+5.Scalable
+6.NPM(node package manager)
+
+4.what is middleware
+
+*Middleware is a function on express.js that execute between in request and response cycle.It is access to the request and response and next function().
+
+*It is used for authentication ,logging,validation and error handling.
+
+Why do we use Middleware?
+Middleware is used for:
+1. Authentication – Checks whether the user is logged in.
+2. Logging – Records client request information.
+3. Validation – Checks whether the incoming data is valid.
+4. Error Handling – Handles errors in the application.
+5. Parsing JSON – Reads JSON data from client requests.
+
+5.what is cors
+
+CORS-stand for cross origin resourse sharing .
+*It is used for security mechanism that allows and restricts frontend application from accessing resources from different origin.
+*In express.js we can enable CORS using cors package
+
+Why do we use CORS?
+1. To allow communication between frontend and backend.
+2. To control which origins can access backend resources.
+3. To handle cross-origin browser requests securely.
+4. To prevent unauthorized websites from accessing resources through browsers.
+
+6.DIFF http and http method
+
+*HTTP
+Http is stand for hyper text transfer protocol .and it is used for communicate protocol and transfer data from client and server
+
+*Http methods
+HTTP methods define the actions performed on backend resources. The important methods are GET, POST, PUT, PATCH, and DELETE, which are used to read, create, update, partially update, and delete data.
+
+GET -Read
+POST - Create
+PUT -Replace
+PATCH - Partial Update
+DELETE - Remove
+
+7.what is json
+
+*JSON stands for JavaScript Object Notation. It is a lightweight data interchange format used to exchange information between frontend and backend applications. It stores data in key-value pairs and supports strings, numbers, booleans, arrays, objects, and null.
+
+Why Do We Use JSON?
+1. To exchange data between frontend and backend.
+2. To send user information through APIs.
+3. To receive data from the server.
+4. To store structured data.
+5. It is easy to read and understand.
+
+8.what is status code
+
+HTTP Status Codes are three-digit numbers sent by the server to indicate the result of a client's request. They are divided into five categories: 100 series informational, 200 series success, 300 series redirection, 400 series client error, and 500 series server error.
+
+9.what is use
+
+*use is method in express used to register middleware function .It is commonly used for JSON parsing,CORS,authentication,loggingand routing in backend application.
+
+*It is used 4 type mainly
+1.app.use-register middleware
+2.app.use(express.json())-parse json data
+3.app.use(cors())-enabe cors
+4.next()-pass control to next middleware or handler.
+
+10.what is express and feature
+
+*Express.js is a fast, lightweight, and flexible web application framework built on Node.js. It is used to develop web applications and REST APIs.
+
+*Feature
+1.Routing
+2.Middleware
+3.HTTP methods
+4.Easy API development
+5.Error Handling
+6.Third party package support
+
+11.what difference node and express
+
+Node:
+1.It is a runtime environment
+2.Runs JavaScript outside the browser.
+3.Used to create servers and backend applications.
+4.Requires more code for routing.
+5.Does not require Express to work
+
+Express:
+1.It is a web framework.
+2.Runs on Node.js.
+3.Makes backend development easier.
+4.Provides simple routing methods.
+5.Requires Node.js to work.
