@@ -13,4 +13,22 @@ export const studentController=async (req,res) => {
     }
     
 }
+export const stuDetailGet=async (req,res) => {
+    try {
+        const{_id}=req.params
+        
+        const finds=await modelss.findOne({_id})
+         if (!finds) {
+            return res.status(404).json({
+                msg: "Student not found"
+            });
+        }
+        console.log(finds);
+         res.status(201).json({msg:"Find successfully...",data:finds})
+        
+    } catch (error) {
+         res.status(400).json({msg:"error..."})
+    }
+    
+}
   

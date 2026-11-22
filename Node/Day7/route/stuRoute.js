@@ -1,8 +1,9 @@
 import express from 'express'
-import { studentController } from '../controller/stucontroller.js'
+import { studentController, stuDetailGet } from '../controller/stucontroller.js'
 
 const stuRoute=express.Router()
 stuRoute.post("/addData",studentController)
+stuRoute.get("/:_id",stuDetailGet)
 
 
 
